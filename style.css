@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+
+    *
+    {
+        box-sizing: border-box;
+    }
+
+
+    body
+    {
+        background-color: #516dff;
+        color: #fff;
+        font-family: 'Press Start 2P', sans-serif;
+        margin: 0;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+
+
+    a{color: #fff;}
+
+    h1
+    {
+        line-height: 1.4;
+        
+    }
+
+
+/* play game btn */
+
+    .btn
+    {
+        border: 0;
+        background-color: #fff;
+        color: #516dff;
+        padding: 15px 20px;
+        font-family: inherit;
+        cursor: pointer; 
+    }
+    
+    .btn:focus
+    {
+        outline: none;
+    }
+
+    .btn:hover
+     {
+        transform: scale(.98);
+        opacity: .9;
+     }
+
+
+     /* screens */
+
+    .screen
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        transition: margin .6s ease-out;
+    }
+
+    .screen.up
+    {
+        margin-top: -100vh;
+    }
+
+    .insects-list
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .insects-list li
+    {
+        margin:  10px;
+    }
+
+
+    .choose-insect-btn:hover
+    {
+        background-color: rgba(0,0,0,.3);
+        color: #fff;
+
+    }
+
+
+    .choose-insect-btn
+    {
+        border: 2px solid #fff;
+        cursor: pointer;
+        font-family: inherit;
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        color: #516dff;
+    }
+
+
+    .choose-insect-btn img
+    {
+        width: 100px;
+        height: 100px;
+    }
+    .choose-insect-btn:hover img
+    {
+        animation: upDown 1s ease-in-out infinite forwards;
+    }
+    @keyframes upDown 
+    {
+        0%{ transform: translateY(0px);}
+        50%{ transform: translateY(-10px);}
+        100%{ transform: translateY(0px);}
+    }
+
+
+
+
+
+
+
+    /* last screen */
+
+
+    .game-container
+    {
+        position: relative;
+    }
+
+    #time, #score
+    {
+        position: absolute;
+        top: 20px;
+    }
+    #time
+    {
+        left: 20px;
+    }
+    #score
+    {
+        right: 20px;
+    }
+
+    #message
+    {
+        line-height: 1.7;
+        background-color: rgba(0,0,0,.5);
+        width: 100%;
+        padding: 20px;
+        z-index: 100;
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-150%);
+        transition: transform .4s ease-in;
+    }
+
+    #message.visible
+    {
+        transform: translate(-50%,150%);
+        opacity: 1;
+    }
+
+    .insect
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        transform: translate(-50%,-50%) scale(1);
+        top: 100px;
+        left: 300px;
+        animation: upDown 1s ease-in-out infinite forwards;
+        transition: transform .3s ease-in-out;
+
+        /* border: 2px solid #fff;
+        border-radius: 50%; */
+    }
+
+    
+    .insect img
+    {
+        width: 100px;
+        cursor: pointer;
+    }
+
+    /* .insect:hover
+    {
+        background-color: #fff;
+    } */
+
+    .insect.caught
+    {
+        animation: none;
+        transform: translate(-50%,-50%) scale(0);
+        
+    }
+
+    .restart
+    {
+        position: absolute;
+        left: auto;
+        top: 20px;
+        transform:  translateX(-50%);
+        animation: upDown 1s ease-in-out infinite forwards;
+    }
+
+    .restart:hover
+    {
+
+        color: rgba(255,255,255,.3);
+        cursor: pointer;
+
+    }
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <!-- font awesome:  -->
+    <script src="https://kit.fontawesome.com/e610e6d59e.js" crossorigin="anonymous"></script>
+
+
+    <title>MATE A FIGURINHA | By Luiz_1.5.2</title>
+</head>
+<body>
+
+    <!-- 1o ecra -->
+    <div class="screen">
+        <h1>Capture A figurinhA</h1>
+        <button class="btn" id="start-btn">Começar Jogo</button>
+    </div>
+
+
+<!-- choose the player -->
+
+    <div class="screen">
+        <h1>Escolha alguma figurinha:</h1>
+
+        <ul class="insects-list">
+            <li><button class="choose-insect-btn"><p>BTS</p><img src="./BTS.png" alt="BTS"></button></li>
+            <li><button class="choose-insect-btn"><p>JP</p><img src="./JP.png" alt="JP"></button></li>
+            <li><button class="choose-insect-btn"><p>LK</p><img src="./LK.png" alt="LK"></button></li>
+            <li><button class="choose-insect-btn"><p><sub>ri</sub>CAR<sub>do</sub></p><img src="./riCARdo.png" alt="liCARdo"></button></li>
+        </ul>
+
+    </div>
+
+<!-- game screen -->
+    <div class="screen game-container">
+
+        <h1 class="restart" onclick="restart()">Recomeçar</h1>
+        <h3 id="time">Tempo: 00:00</h3>
+        <h3 id="score">Pontuação: 0</h3>
+        <h5 id="message" class="">Ainda não percebeu?<br>Este jogo é impossivel!!!</h5>
+
+    </div>
+
+    <!-- window.location.href = './index.html' -->
+
+<script src="script.js"></script>
+</body>
+</html>
