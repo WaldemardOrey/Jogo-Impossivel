@@ -95,8 +95,8 @@ function increaseTime()
         const width = window.innerWidth
         const height = window.innerHeight
 
-        const x = Math.random() * (width - 150) + 100
-        const y = Math.random() * (height - 150) + 100
+        const x = Math.random() * (width - 200) + 50
+        const y = Math.random() * (height - 200) + 50
         return {x, y}
 
     }
