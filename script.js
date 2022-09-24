@@ -38,7 +38,7 @@ function increaseTime()
     let s = seconds % 60
     m = m < 10 ? `0${m}` : m
     s = s < 10 ? `0${s}` : s
-    timeEl.innerHTML = `Tempo: ${m}:${s}`
+    timeEl.innerHTML = `${m}:${s}`
     seconds++
 }
 
@@ -81,7 +81,7 @@ function increaseTime()
         if(score === 15){
             messageEl.classList.add('visible')
         }
-        scoreEl.innerHTML = `Pontuação: ${score*50}`
+        scoreEl.innerHTML = `${score*50}`
         if(score === 20)
         {
             messageEl.classList.remove('visible')
